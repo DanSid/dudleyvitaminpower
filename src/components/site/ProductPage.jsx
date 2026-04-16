@@ -88,14 +88,14 @@ export default function ProductPage({ product }) {
             <CouponStrip className="w-fit" />
             <PromoBanner className="!w-fit !max-w-none px-6 py-3 text-sm shadow-none" />
           </Reveal>
-{/* 
+
           <Link
             to="/"
             className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-white/[0.62] transition hover:text-white"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to home
-          </Link> */}
+          </Link>
 
           <div className="mt-8 grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
             <motion.div style={{ y: heroTextY }}>

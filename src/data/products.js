@@ -103,7 +103,7 @@ export const products = [
     shopLink: 'https://shop.dudleyq.com/products/vitamin-power-leave-in-conditioner-8-oz?_pos=1&_sid=abe685d96&_ss=r',
     name: 'Vitamin Power Leave-In',
     eyebrow: 'Leave-in conditioning essential',
-    shortName: 'Vitamin Power',
+    shortName: 'Vitamin Power Leave-In',
     tagline: 'An effortless leave-in built for softness, shine, and convenience.',
     description:
       'Vitamin Power is positioned as the quick daily essential in the Dudley collection. This redesign gives it a bright, premium identity with stronger product framing and modern call-to-action sections.',
