@@ -110,11 +110,11 @@ export const products = [
     accent: '#D8821B',
     accentSoft: '#FFF4E6',
     accentDeep: '#4A2500',
-    heroImage: '/assets/redesign/vitamin-power-main.png',
+    heroImage: '/assets/Vitamin Power Leave in Conditioner.mp4',
     gallery: [
       '/assets/redesign/vitamin-power-main.png',
       '/assets/redesign/vitamin-power-alt.png',
-      '/assets/redesign/vitamin-power-cutout.png'
+      // '/assets/redesign/vitamin-power-cutout.png'
     ],
     extraImages: [
       '/assets/Dudleys Vitamins Power A.png',
