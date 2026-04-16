@@ -232,6 +232,8 @@ export default function ProductPage({ product }) {
                 muted
                 loop
                 playsInline
+                preload="metadata"
+                controls={false}
                 className="relative z-10 h-full min-h-[560px] w-full object-contain p-8 pt-16 pb-24 lg:p-10 lg:pt-20 lg:pb-32"
               />
             ) : (
