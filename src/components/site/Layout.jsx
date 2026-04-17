@@ -67,53 +67,53 @@ export function Navbar() {
 }
 
 export function Footer() {
-  return (
-    <footer
-      className="border-t border-white/10"
-      style={{
-        background:
-          'linear-gradient(180deg, var(--theme-footer-start) 0%, var(--theme-footer-mid) 44%, var(--theme-footer-end) 100%)',
-      }}
-    >
-      <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
-        <div className="grid gap-16 lg:grid-cols-[1.2fr_0.8fr]">
-          <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#5b4430]">
-              Beauty-led redesign
-            </p>
-            <h3 className="mt-6 max-w-3xl font-display text-5xl leading-[0.95] text-[#2f2116] sm:text-6xl lg:text-[4.8rem]">
-              A richer first impression for Dudley.
-            </h3>
-            <p className="mt-8 max-w-3xl text-lg leading-9 text-[#433121]/80">
-              The new visual system brings the homepage and product landing pages into one
-              premium direction: stronger typography, darker editorial contrast, animated
-              particles, and more intentional product cards.
-            </p>
-          </div>
+  // return (
+  //   <footer
+  //     className="border-t border-white/10"
+  //     style={{
+  //       background:
+  //         'linear-gradient(180deg, var(--theme-footer-start) 0%, var(--theme-footer-mid) 44%, var(--theme-footer-end) 100%)',
+  //     }}
+  //   >
+  //     <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
+  //       <div className="grid gap-16 lg:grid-cols-[1.2fr_0.8fr]">
+  //         <div>
+  //           <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#5b4430]">
+  //             Beauty-led redesign
+  //           </p>
+  //           <h3 className="mt-6 max-w-3xl font-display text-5xl leading-[0.95] text-[#2f2116] sm:text-6xl lg:text-[4.8rem]">
+  //             A richer first impression for Dudley.
+  //           </h3>
+  //           <p className="mt-8 max-w-3xl text-lg leading-9 text-[#433121]/80">
+  //             The new visual system brings the homepage and product landing pages into one
+  //             premium direction: stronger typography, darker editorial contrast, animated
+  //             particles, and more intentional product cards.
+  //           </p>
+  //         </div>
 
-          <div className="flex items-end lg:justify-end">
-            <div className="space-y-3 text-sm leading-8 text-[#433121]/80">
-              <p>Dudley Beauty Corp, LLC</p>
-              <p>P.O. Box 168 · High Point, NC 27261</p>
-              <p>888-573-8210</p>
-              <a href="mailto:admin@dudleyq.com" className="text-[#69482a] transition hover:text-[#2f2116]">
-                admin@dudleyq.com
-              </a>
-            </div>
-          </div>
-        </div>
+  //         <div className="flex items-end lg:justify-end">
+  //           <div className="space-y-3 text-sm leading-8 text-[#433121]/80">
+  //             <p>Dudley Beauty Corp, LLC</p>
+  //             <p>P.O. Box 168 · High Point, NC 27261</p>
+  //             <p>888-573-8210</p>
+  //             <a href="mailto:admin@dudleyq.com" className="text-[#69482a] transition hover:text-[#2f2116]">
+  //               admin@dudleyq.com
+  //             </a>
+  //           </div>
+  //         </div>
+  //       </div>
 
-        <div className="mt-24 flex flex-col gap-8 border-t border-white/10 pt-10 md:flex-row md:items-center md:justify-between">
-          <div className="flex items-center gap-4">
-            <img src="/assets/New Dudley Logo Med.png" alt="Dudley Beauty & Cosmetics" className="h-10 w-auto opacity-90" />
-            <p className="text-sm text-[#433121]/80">
-              59 years of premium haircare rooted in Black beauty heritage.
-            </p>
-          </div>
+  //       <div className="mt-24 flex flex-col gap-8 border-t border-white/10 pt-10 md:flex-row md:items-center md:justify-between">
+  //         <div className="flex items-center gap-4">
+  //           <img src="/assets/New Dudley Logo Med.png" alt="Dudley Beauty & Cosmetics" className="h-10 w-auto opacity-90" />
+  //           <p className="text-sm text-[#433121]/80">
+  //             59 years of premium haircare rooted in Black beauty heritage.
+  //           </p>
+  //         </div>
 
-          <p className="text-sm text-[#433121]/80">© 2026 Dudley Beauty</p>
-        </div>
-      </div>
-    </footer>
-  )
+  //         <p className="text-sm text-[#433121]/80">© 2026 Dudley Beauty</p>
+  //       </div>
+  //     </div>
+  //   </footer>
+  // )
 }

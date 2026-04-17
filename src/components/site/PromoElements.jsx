@@ -2,7 +2,7 @@ import { Gift, ShoppingBag, Star, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { amazonRating, couponOffer } from '../../data/products'
 
-const mainDudleyUrl = 'https://shop.dudleyq.com'
+const mainDudleyUrl = 'https://shop.dudleyq.com/products/vitamin-power-leave-in-conditioner-8-oz?_pos=1&_sid=abe685d96&_ss=r'
 
 export function AmazonRatingBadge({ dark = false, className = '' }) {
   return (
@@ -72,45 +72,45 @@ export function CouponPopup() {
 
   if (!isOpen) return null
 
-  return (
-    <div className="fixed inset-0 z-[80] flex items-end justify-center bg-black/[0.65] p-4 backdrop-blur-sm md:items-center">
-      <div className="relative w-full max-w-xl overflow-hidden rounded-[32px] border border-white/10 bg-[#0f0a0d] p-6 text-white shadow-[0_24px_80px_rgba(0,0,0,0.5)] md:p-8">
-        <button
-          type="button"
-          aria-label="Close coupon popup"
-          onClick={() => setIsOpen(false)}
-          className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition hover:bg-white/10 hover:text-white"
-        >
-          <X size={18} />
-        </button>
+  // return (
+  //   <div className="fixed inset-0 z-[80] flex items-end justify-center bg-black/[0.65] p-4 backdrop-blur-sm md:items-center">
+  //     <div className="relative w-full max-w-xl overflow-hidden rounded-[32px] border border-white/10 bg-[#0f0a0d] p-6 text-white shadow-[0_24px_80px_rgba(0,0,0,0.5)] md:p-8">
+  //       <button
+  //         type="button"
+  //         aria-label="Close coupon popup"
+  //         onClick={() => setIsOpen(false)}
+  //         className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition hover:bg-white/10 hover:text-white"
+  //       >
+  //         <X size={18} />
+  //       </button>
 
-        <div className="absolute -left-10 top-0 h-40 w-40 rounded-full bg-[#d59ca1]/20 blur-3xl" />
-        <div className="absolute -right-4 bottom-0 h-40 w-40 rounded-full bg-[#efc868]/15 blur-3xl" />
+  //       <div className="absolute -left-10 top-0 h-40 w-40 rounded-full bg-[#d59ca1]/20 blur-3xl" />
+  //       <div className="absolute -right-4 bottom-0 h-40 w-40 rounded-full bg-[#efc868]/15 blur-3xl" />
 
-        <div className="relative">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#d59ca1]/25 bg-[#d59ca1]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#efc9cb]">
-            <Gift size={14} /> Limited offer
-          </div>
-          <h3 className="mt-5 max-w-lg font-display text-5xl leading-tight text-[#f7e8e8]">{couponOffer.code}</h3>
-          <p className="mt-3 max-w-lg text-base leading-7 text-white/70 md:text-lg">
-            Get {couponOffer.text}. Use the code on the Dudley shop and continue browsing the
-            refreshed collection experience.
-          </p>
+  //       <div className="relative">
+  //         <div className="inline-flex items-center gap-2 rounded-full border border-[#d59ca1]/25 bg-[#d59ca1]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#efc9cb]">
+  //           <Gift size={14} /> Limited offer
+  //         </div>
+  //         <h3 className="mt-5 max-w-lg font-display text-5xl leading-tight text-[#f7e8e8]">{couponOffer.code}</h3>
+  //         <p className="mt-3 max-w-lg text-base leading-7 text-white/70 md:text-lg">
+  //           Get {couponOffer.text}. Use the code on the Dudley shop and continue browsing the
+  //           refreshed collection experience.
+  //         </p>
 
-          <div className="mt-6">
-            <AmazonRatingBadge dark />
-          </div>
+  //         <div className="mt-6">
+  //           <AmazonRatingBadge dark />
+  //         </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={mainDudleyUrl} target="_blank" rel="noreferrer" className="primary-pill">
-              Go to Dudley shop
-            </a>
-            <button type="button" onClick={() => setIsOpen(false)} className="secondary-pill-dark">
-              Keep browsing
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+  //         <div className="mt-8 flex flex-wrap gap-3">
+  //           <a href={mainDudleyUrl} target="_blank" rel="noreferrer" className="primary-pill">
+  //             Go to Dudley shop
+  //           </a>
+  //           <button type="button" onClick={() => setIsOpen(false)} className="secondary-pill-dark">
+  //             Keep browsing
+  //           </button>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </div>
+  // )
 }
