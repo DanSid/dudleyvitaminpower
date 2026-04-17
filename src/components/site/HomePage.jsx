@@ -12,11 +12,14 @@ const shopUrl = 'https://shop.dudleyq.com'
 function FeatureCard({ product, index }) {
   return (
     <Link to={product.route} className="dudley-card dudley-card-hover group flex h-full flex-col overflow-hidden">
-      <div className="relative overflow-hidden border-b border-white/10 bg-[#130d11]">
+      <div
+        className="relative overflow-hidden border-b border-white/10"
+        style={{ background: 'var(--theme-top-card)' }}
+      >
         <div
           className="absolute inset-0 opacity-70 transition duration-500 group-hover:scale-110"
           style={{
-            background: `radial-gradient(circle at top right, ${product.accent}50, transparent 45%), linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.5))`,
+            background: `radial-gradient(circle at top right, ${product.accent}50, transparent 45%), var(--theme-top-card)`,
           }}
         />
         <img
@@ -24,27 +27,27 @@ function FeatureCard({ product, index }) {
           alt={product.name}
           className="h-72 w-full object-contain p-8 transition duration-500 group-hover:-translate-y-2 group-hover:scale-105"
         />
-        <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/[0.35] px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.32em] text-white/70">
-          <span className="h-2 w-2 rounded-full bg-[#d38d92]" />
+        <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-[#7a5e40]/20 bg-[#f4e6d4]/85 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.32em] text-[#4a3625]/80">
+          <span className="h-2 w-2 rounded-full bg-[#704f2f]" />
           {product.badge}
         </div>
-        <div className="absolute bottom-5 right-5 rounded-full border border-white/10 bg-white/10 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/70">
+        <div className="absolute bottom-5 right-5 rounded-full border border-[#7a5e40]/20 bg-[#f4e6d4]/80 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#4a3625]/80">
           0{index + 1}
         </div>
       </div>
 
       <div className="flex flex-1 flex-col gap-5 p-6">
         <div className="space-y-3">
-          <p className="text-[11px] uppercase tracking-[0.32em] text-[#d7a1a4]">{product.eyebrow}</p>
-          <h3 className="font-display text-4xl leading-none text-[#f3e8e8]">{product.shortName}</h3>
-          <p className="text-base leading-7 text-white/[0.66]">{product.tagline}</p>
+          <p className="text-[11px] uppercase tracking-[0.32em] text-[#69482a]">{product.eyebrow}</p>
+          <h3 className="font-display text-4xl leading-none text-[#24170d]">{product.shortName}</h3>
+          <p className="text-base leading-7 text-[#433121]/82">{product.tagline}</p>
         </div>
 
         <div className="flex flex-wrap gap-2">
           {product.notes.slice(0, 3).map((note) => (
             <span
               key={note}
-              className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs uppercase tracking-[0.2em] text-white/[0.62]"
+              className="rounded-full border border-[#7a5e40]/18 bg-[#f6eadb]/72 px-3 py-2 text-xs uppercase tracking-[0.2em] text-[#433121]/80"
             >
               {note}
             </span>
@@ -78,13 +81,19 @@ export default function HomePage() {
   const heroGlowOpacity = useTransform(smoothProgress, [0, 0.7], [0.95, 0.35])
 
   return (
-    <main className="relative overflow-hidden bg-transparent text-white">
+    <main className="relative overflow-hidden bg-transparent text-[#2f2116]">
       <motion.div style={{ y: heroParticlesY, opacity: heroGlowOpacity }} className="absolute inset-0">
         <QuantumNodes />
       </motion.div>
 
       <section ref={heroRef} className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(222,235,255,0.68),transparent_30%),linear-gradient(180deg,rgba(167,191,222,0.92),rgba(130,160,201,0.98))]" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(circle at top, var(--theme-hero-glow), transparent 30%), linear-gradient(180deg, var(--theme-hero-top), var(--theme-hero-bottom))',
+          }}
+        />
         <div className="dudley-grid absolute inset-0 opacity-[0.18]" />
         <motion.div
           style={{ y: heroCardsY, rotate: heroCardsRotate }}
@@ -92,8 +101,8 @@ export default function HomePage() {
         >
           <div className="dudley-card hero-floating-card p-5">
             <p className="section-label">Runway texture</p>
-            <h3 className="mt-3 font-display text-3xl text-[#f4e5e5]">Editorial finish</h3>
-            <p className="mt-3 text-sm leading-6 text-white/[0.62]">
+            <h3 className="mt-3 font-display text-3xl text-[#24170d]">Editorial finish</h3>
+            <p className="mt-3 text-sm leading-6 text-[#433121]/78">
               Motion, depth, and premium framing carried across the homepage hero.
             </p>
           </div>
@@ -110,8 +119,8 @@ export default function HomePage() {
               <Star className="h-4 w-4 fill-current" />
               <Star className="h-4 w-4 fill-current" />
             </div>
-            <h3 className="mt-4 font-display text-3xl text-[#f4e5e5]">Luxury campaign motion</h3>
-            <p className="mt-3 text-sm leading-6 text-white/[0.62]">
+            <h3 className="mt-4 font-display text-3xl text-[#24170d]">Luxury campaign motion</h3>
+            <p className="mt-3 text-sm leading-6 text-[#433121]/78">
               Particles and glow layers stay active while the hero content drifts with scroll.
             </p>
           </div>
@@ -129,15 +138,15 @@ export default function HomePage() {
           >
             <Reveal direction="up" delay={0.05}>
               <div className="hero-pill mx-auto mb-8">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#c9858c]" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#704f2f]" />
                 Over 50 years of Black excellence
               </div>
             </Reveal>
 
             <Reveal direction="up" delay={0.12}>
-              <h1 className="font-display text-[4rem] leading-[0.9] tracking-[-0.04em] text-[#d99a9f] sm:text-[5.75rem] lg:text-[8rem]">
+              <h1 className="font-display text-[4rem] leading-[0.9] tracking-[-0.04em] text-[#2d2014] sm:text-[5.75rem] lg:text-[8rem]">
                 Timeless
-                <span className="block font-serif text-[0.84em] italic text-[#d7cdce]">
+                <span className="block font-serif text-[0.84em] italic text-[#6b5037]">
                   Beauty, Rooted in
                 </span>
                 <span className="block text-[#e0ba55]">Legacy</span>
@@ -145,7 +154,7 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal direction="up" delay={0.2}>
-              <p className="mx-auto mt-8 max-w-3xl text-lg leading-9 text-white/[0.64] sm:text-xl">
+              <p className="mx-auto mt-8 max-w-3xl text-lg leading-9 text-[#433121]/82 sm:text-xl">
                 Professional hair care and cosmetics crafted for textured and curly hair. Born in
                 Greensboro, NC and trusted by generations of stylists, salons, and beauty lovers.
               </p>
@@ -179,7 +188,7 @@ export default function HomePage() {
                 <Reveal key={item} direction={index === 1 ? 'up' : index % 2 === 0 ? 'left' : 'right'} delay={index * 0.1}>
                   <div className="dudley-card flex items-center gap-3 px-4 py-4">
                     <CheckCircle2 className="h-5 w-5 text-[#e7bf64]" />
-                    <span className="text-sm uppercase tracking-[0.16em] text-white/[0.72]">{item}</span>
+                    <span className="text-sm uppercase tracking-[0.16em] text-[#2f2116]/88">{item}</span>
                   </div>
                 </Reveal>
               ))}
@@ -195,10 +204,10 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(211,141,146,0.18),transparent_34%)]" />
               <div className="relative">
                 <p className="section-label">Heritage</p>
-                <h2 className="font-display mt-5 text-5xl leading-none text-[#f2d8d8] sm:text-6xl">
+                <h2 className="font-display mt-5 text-5xl leading-none text-[#24170d] sm:text-6xl">
                   A beauty house shaped by texture, ritual, and trust.
                 </h2>
-                <p className="mt-6 max-w-2xl text-lg leading-8 text-white/[0.68]">
+                <p className="mt-6 max-w-2xl text-lg leading-8 text-[#433121]/82">
                   The redesign carries the drama of the reference hero into the Dudley brand:
                   elegant typography, richer depth, layered particles, and product cards that feel
                   editorial instead of flat.
@@ -220,9 +229,9 @@ export default function HomePage() {
                     <Sparkles className="h-7 w-7 text-white/80" />
                   </div>
                   <div>
-                    <p className="text-[11px] uppercase tracking-[0.28em] text-[#d9a3a7]">{product.eyebrow}</p>
-                    <h3 className="mt-2 font-display text-3xl text-[#f5eded]">{product.shortName}</h3>
-                    <p className="mt-2 text-sm leading-6 text-white/[0.62]">{product.tagline}</p>
+                    <p className="text-[11px] uppercase tracking-[0.28em] text-[#69482a]">{product.eyebrow}</p>
+                    <h3 className="mt-2 font-display text-3xl text-[#24170d]">{product.shortName}</h3>
+                    <p className="mt-2 text-sm leading-6 text-[#433121]/80">{product.tagline}</p>
                   </div>
                 </div>
               </Reveal>
@@ -236,11 +245,11 @@ export default function HomePage() {
           <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="section-label">Landing pages</p>
-              <h2 className="mt-4 font-display text-5xl leading-none text-[#f2dfdf] sm:text-6xl">
+              <h2 className="mt-4 font-display text-5xl leading-none text-[#24170d] sm:text-6xl">
                 Rebuilt with the same hero energy and card depth.
               </h2>
             </div>
-            <p className="max-w-xl text-base leading-7 text-white/[0.62]">
+            <p className="max-w-xl text-base leading-7 text-[#433121]/80">
               Every product page now shares the same visual language: airy blue gradients,
               animated node motion, layered cards, and stronger product framing.
             </p>
@@ -265,10 +274,10 @@ export default function HomePage() {
           <Reveal direction="left">
             <div className="dudley-card p-8 lg:p-10">
               <p className="section-label">Collection preview</p>
-              <h2 className="mt-4 font-display text-5xl leading-none text-[#f4e2e2]">
+              <h2 className="mt-4 font-display text-5xl leading-none text-[#24170d]">
                 Product stories that feel premium before the click.
               </h2>
-              <p className="mt-6 text-lg leading-8 text-white/[0.66]">
+              <p className="mt-6 text-lg leading-8 text-[#433121]/82">
                 The hover behavior, glass cards, and motion lighting give the homepage a stronger
                 first impression while still letting visitors move quickly into a specific landing
                 page or the Dudley shop.
@@ -298,9 +307,9 @@ export default function HomePage() {
                     <img src={product.gallery[0]} alt={product.name} className="h-full w-full object-contain p-6" />
                   </div>
                   <div className="p-5">
-                    <p className="text-[11px] uppercase tracking-[0.28em] text-[#dba6aa]">{product.eyebrow}</p>
-                    <h3 className="mt-2 font-display text-3xl text-[#f2e7e7]">{product.name}</h3>
-                    <p className="mt-2 text-sm leading-6 text-white/[0.62]">{product.description}</p>
+                    <p className="text-[11px] uppercase tracking-[0.28em] text-[#69482a]">{product.eyebrow}</p>
+                    <h3 className="mt-2 font-display text-3xl text-[#24170d]">{product.name}</h3>
+                    <p className="mt-2 text-sm leading-6 text-[#433121]/80">{product.description}</p>
                   </div>
                 </div>
               </Reveal>

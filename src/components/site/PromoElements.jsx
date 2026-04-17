@@ -22,7 +22,7 @@ export function AmazonRatingBadge({ dark = false, className = '' }) {
         <span className="text-base font-extrabold">
           {amazonRating.score} {amazonRating.label}
         </span>
-        <span className="text-sm font-semibold text-white/70">{amazonRating.reviews}</span>
+        <span className="text-sm font-semibold  text-black">{amazonRating.reviews}</span>
       </div>
     </div>
   )
